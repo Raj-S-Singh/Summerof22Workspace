@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "mock-test-platform": "apps/mock-test-platform",
+    "mock-test-platform-e2e": "apps/mock-test-platform-e2e"
+  }
+}
