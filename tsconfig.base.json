@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@final-summer-workspace/navigationbar": [
+        "libs/navigationbar/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
