@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@final-summer-workspace/configuration-box": [
+        "libs/configuration-box/src/index.ts"
+      ],
       "@final-summer-workspace/navigationbar": [
         "libs/navigationbar/src/index.ts"
       ]
