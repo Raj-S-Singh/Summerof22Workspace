@@ -1,4 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 // import styles from './navigationbar.module.css';
 
@@ -17,10 +16,7 @@ export function Navigationbar(props: NavigationbarProps) {
             <Nav.Link href="#pricing">Pricing</Nav.Link>
           </Nav>
         </Container>
-      </Navbar>{' '}
-      <div>
-        <h1>Welcome to Navigationbar!</h1>
-      </div>
+      </Navbar>
     </>
   );
 }

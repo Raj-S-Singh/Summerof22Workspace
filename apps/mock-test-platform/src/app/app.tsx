@@ -2,13 +2,21 @@
 import { ConfigurationBox } from '@final-summer-workspace/configuration-box';
 import { Navigationbar } from '@final-summer-workspace/navigationbar';
 import styles from './app.module.css';
-import NxWelcome from './nx-welcome';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export function App() {
   return (
     <>
       <Navigationbar></Navigationbar>
-      <ConfigurationBox></ConfigurationBox>
+      <div id={styles['main-container']}>
+        <ConfigurationBox></ConfigurationBox>
+      </div>
+      <footer id={styles['footer-container']}>
+        <p>
+          Author: Hege Refsnes <br />
+          <a href="mailto:hege@example.com">hege@example.com</a>
+        </p>
+      </footer>
     </>
   );
 }
