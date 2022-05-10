@@ -20,6 +20,9 @@
       ],
       "@final-summer-workspace/navigationbar": [
         "libs/navigationbar/src/index.ts"
+      ],
+      "@final-summer-workspace/test-application": [
+        "libs/test-application/src/index.ts"
       ]
     }
   },

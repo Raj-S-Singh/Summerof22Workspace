@@ -10,27 +10,23 @@ export const ConfigurationBox = (props: ConfigurationBoxProps) => {
       <div id={styles['card-container']}>
         <Card bg="light" text="dark">
           <Card.Header>
-            <Nav variant="pills" defaultActiveKey="#first">
+            <Nav variant="tabs" defaultActiveKey="#first">
               <Nav.Item>
-                <Nav.Link href="#first">Active</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link href="#link">Link</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link href="#disabled" disabled>
-                  Disabled
-                </Nav.Link>
+                <Nav.Link href="#first">Configure</Nav.Link>
               </Nav.Item>
             </Nav>
           </Card.Header>
           <Card.Body>
-            <Card.Title>Special title treatment</Card.Title>
+            <Card.Title>Configure your OMR</Card.Title>
             <Card.Text>
-              With supporting text below as a natural lead-in to additional
-              content.
+              <input type="number" value={30} /> X{' '}
+              <input type="number" min={2} max={6} value={4} />
+              <br />
+              <br />
+              <b>Timer (in mins) :</b>{' '}
+              <input type="number" value={60} min={30} max={180} />
             </Card.Text>
-            <Button variant="dark">Go somewhere</Button>
+            <Button variant="dark">Confirm</Button>
           </Card.Body>
         </Card>
       </div>
