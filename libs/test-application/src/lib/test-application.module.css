@@ -1,7 +1,25 @@
-/*
- * Replace this with your own classes
- *
- * e.g.
- * .container {
- * }
-*/
+.container {
+    height: 87vh;
+    width: 100%;
+    display: flex;
+}
+
+.questions {
+    width: 30%;
+    height: 100%;
+    background-color: lightgrey;
+}
+
+.options {
+    width: 70%;
+    height: 100%;
+    background-color: whitesmoke;
+    user-select: none;
+    padding: 10px;
+    text-align: left;
+    font-family: Goudy Old Style, Garamond, Big Caslon, Times New Roman, serif;
+    font-size: 25px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+}
