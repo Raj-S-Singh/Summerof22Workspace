@@ -6,7 +6,7 @@ export interface TestApplicationProps {}
 export function TestApplication(props: TestApplicationProps) {
   return (
     <div className={styles['container']}>
-      <h1>Welcome to TestApplication!</h1>
+      {/* <h1>Welcome to TestApplication!</h1> */}
     </div>
   );
 }

@@ -3,14 +3,16 @@ import { ConfigurationBox } from '@final-summer-workspace/configuration-box';
 import { Navigationbar } from '@final-summer-workspace/navigationbar';
 import styles from './app.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { TestApplication } from '@final-summer-workspace/test-application';
 
 export function App() {
   return (
     <>
       <Navigationbar></Navigationbar>
-      <div id={styles['main-container']}>
+      {/* <div id={styles['main-container']}>
         <ConfigurationBox></ConfigurationBox>
-      </div>
+      </div> */}
+      <TestApplication />
       <footer id={styles['footer-container']}>
         <p>
           Author: Hege Refsnes <br />
