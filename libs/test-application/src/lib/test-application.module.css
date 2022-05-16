@@ -7,13 +7,19 @@
 .questions {
     width: 30%;
     height: 100%;
-    background-color: lightgrey;
+    background-color: rgb(33, 37, 41);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px;
 }
 
 .options {
     width: 70%;
     height: 100%;
-    background-color: whitesmoke;
+    background-color: rgb(24, 24, 24);
+    color: white;
     user-select: none;
     padding: 10px;
     text-align: left;
@@ -22,4 +28,34 @@
     font-style: normal;
     font-variant: normal;
     font-weight: 400;
+}
+
+#questions-header {
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    color: white;
+    height: 20%;
+}
+
+.navigator-deck {
+    padding: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+#previous-button,
+#next-button {
+    width: 15vh;
+    padding: 5px;
+    margin: 5px;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+.option-notification {
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
 }

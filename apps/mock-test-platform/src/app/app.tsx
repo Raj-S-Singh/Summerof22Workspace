@@ -12,7 +12,7 @@ export function App() {
             {/* <div id={styles['main-container']}>
         <ConfigurationBox></ConfigurationBox>
       </div> */}
-            <TestApplication noOfOptions={6} />
+            <TestApplication noOfOptions={6} noOfQuestions={95} />
             <footer id={styles['footer-container']}>
                 <p>
                     Author: Hege Refsnes <br />
