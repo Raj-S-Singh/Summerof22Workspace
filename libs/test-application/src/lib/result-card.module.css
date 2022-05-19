@@ -1,0 +1,30 @@
+.result-card {
+    height: 87vh;
+    width: 100%;
+    display: flex;
+    background-color: rgb(24, 24, 24);
+    flex-direction: column;
+}
+
+.result-card-header {
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    color: white;
+    height: 8vh;
+}
+
+.result-card-entries {
+    margin: 2px;
+    padding: 2px;
+    height: 73vh;
+    color: white;
+    font-family: Goudy Old Style, Garamond, Big Caslon, Times New Roman, serif;
+    font-style: normal;
+    font-variant: normal;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 15px;
+    text-align: left;
+}

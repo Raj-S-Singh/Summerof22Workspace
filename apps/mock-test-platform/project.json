@@ -1,82 +1,84 @@
 {
-  "sourceRoot": "apps/mock-test-platform/src",
-  "projectType": "application",
-  "targets": {
-    "build": {
-      "executor": "@nrwl/web:webpack",
-      "outputs": ["{options.outputPath}"],
-      "defaultConfiguration": "production",
-      "options": {
-        "compiler": "babel",
-        "outputPath": "dist/apps/mock-test-platform",
-        "index": "apps/mock-test-platform/src/index.html",
-        "baseHref": "/",
-        "main": "apps/mock-test-platform/src/main.tsx",
-        "polyfills": "apps/mock-test-platform/src/polyfills.ts",
-        "tsConfig": "apps/mock-test-platform/tsconfig.app.json",
-        "assets": [
-          "apps/mock-test-platform/src/favicon.ico",
-          "apps/mock-test-platform/src/assets"
-        ],
-        "styles": ["apps/mock-test-platform/src/styles.css"],
-        "scripts": [],
-        "webpackConfig": "@nrwl/react/plugins/webpack"
-      },
-      "configurations": {
-        "development": {
-          "extractLicenses": false,
-          "optimization": false,
-          "sourceMap": true,
-          "vendorChunk": true
-        },
-        "production": {
-          "fileReplacements": [
-            {
-              "replace": "apps/mock-test-platform/src/environments/environment.ts",
-              "with": "apps/mock-test-platform/src/environments/environment.prod.ts"
+    "sourceRoot": "apps/mock-test-platform/src",
+    "projectType": "application",
+    "targets": {
+        "build": {
+            "executor": "@nrwl/web:webpack",
+            "outputs": ["{options.outputPath}"],
+            "defaultConfiguration": "production",
+            "options": {
+                "compiler": "babel",
+                "outputPath": "dist/apps/mock-test-platform",
+                "index": "apps/mock-test-platform/src/index.html",
+                "baseHref": "/",
+                "main": "apps/mock-test-platform/src/main.tsx",
+                "polyfills": "apps/mock-test-platform/src/polyfills.ts",
+                "tsConfig": "apps/mock-test-platform/tsconfig.app.json",
+                "assets": [
+                    "apps/mock-test-platform/src/favicon.ico",
+                    "apps/mock-test-platform/src/assets"
+                ],
+                "styles": ["apps/mock-test-platform/src/styles.css"],
+                "scripts": [],
+                "webpackConfig": "@nrwl/react/plugins/webpack"
+            },
+            "configurations": {
+                "development": {
+                    "extractLicenses": false,
+                    "optimization": false,
+                    "sourceMap": true,
+                    "vendorChunk": true
+                },
+                "production": {
+                    "fileReplacements": [
+                        {
+                            "replace": "apps/mock-test-platform/src/environments/environment.ts",
+                            "with": "apps/mock-test-platform/src/environments/environment.prod.ts"
+                        }
+                    ],
+                    "optimization": true,
+                    "outputHashing": "all",
+                    "sourceMap": false,
+                    "namedChunks": false,
+                    "extractLicenses": true,
+                    "vendorChunk": false
+                }
             }
-          ],
-          "optimization": true,
-          "outputHashing": "all",
-          "sourceMap": false,
-          "namedChunks": false,
-          "extractLicenses": true,
-          "vendorChunk": false
-        }
-      }
-    },
-    "serve": {
-      "executor": "@nrwl/web:dev-server",
-      "defaultConfiguration": "development",
-      "options": {
-        "buildTarget": "mock-test-platform:build",
-        "hmr": true
-      },
-      "configurations": {
-        "development": {
-          "buildTarget": "mock-test-platform:build:development"
         },
-        "production": {
-          "buildTarget": "mock-test-platform:build:production",
-          "hmr": false
+        "serve": {
+            "executor": "@nrwl/web:dev-server",
+            "defaultConfiguration": "development",
+            "options": {
+                "buildTarget": "mock-test-platform:build",
+                "hmr": true
+            },
+            "configurations": {
+                "development": {
+                    "buildTarget": "mock-test-platform:build:development"
+                },
+                "production": {
+                    "buildTarget": "mock-test-platform:build:production",
+                    "hmr": false
+                }
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "outputs": ["{options.outputFile}"],
+            "options": {
+                "lintFilePatterns": [
+                    "apps/mock-test-platform/**/*.{ts,tsx,js,jsx}"
+                ]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/apps/mock-test-platform"],
+            "options": {
+                "jestConfig": "apps/mock-test-platform/jest.config.ts",
+                "passWithNoTests": true
+            }
         }
-      }
     },
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["apps/mock-test-platform/**/*.{ts,tsx,js,jsx}"]
-      }
-    },
-    "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/mock-test-platform"],
-      "options": {
-        "jestConfig": "apps/mock-test-platform/jest.config.ts",
-        "passWithNoTests": true
-      }
-    }
-  },
-  "tags": []
+    "tags": []
 }

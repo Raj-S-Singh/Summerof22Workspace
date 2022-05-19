@@ -5,6 +5,7 @@ export interface TimerProps {
     isTimer: boolean;
     timerDuration?: number; // No of seconds for the timer
     currentTime: number;
+    onTimerExpire: () => void;
 }
 
 const options: Intl.DateTimeFormatOptions = {
@@ -21,12 +22,14 @@ const getTimeString = (date: Date): string => {
     return date.toLocaleString('en-us', options);
 };
 
-const getTimerString = (num: number): string => {
-    return num > 0
-        ? `${Math.floor(num / 3600)} : ${Math.floor(num / 60)} : ${Math.floor(
-              num % 60
-          )}`
-        : '00: 00 : 00';
+const getTimerString = (num: number, expiryCallback: () => void): string => {
+    if (num > 0) {
+        return `${Math.floor(num / 3600)} : ${Math.floor(
+            num / 60
+        )} : ${Math.floor(num % 60)}`;
+    }
+    expiryCallback();
+    return '00: 00 : 00';
 };
 
 export const Timer = (timerProps: TimerProps) => {
@@ -36,7 +39,6 @@ export const Timer = (timerProps: TimerProps) => {
 
     useEffect(() => {
         const update = setInterval(() => setCurrentTimer(new Date()), 1000);
-        console.log('UseEffect Hook called');
         return () => clearInterval(update);
     }, []);
 
@@ -46,7 +48,8 @@ export const Timer = (timerProps: TimerProps) => {
                 {timerProps.isTimer
                     ? getTimerString(
                           (timerProps?.timerDuration ?? 3600) -
-                              (currentTimer.valueOf() - startTime) / 1000
+                              (currentTimer.valueOf() - startTime) / 1000,
+                          timerProps.onTimerExpire
                       )
                     : getTimeString(currentTimer)}
             </div>

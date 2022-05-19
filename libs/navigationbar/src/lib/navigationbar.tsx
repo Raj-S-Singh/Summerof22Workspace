@@ -1,13 +1,13 @@
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import { Timer } from './timer';
-// import styles from './navigationbar.module.css';
 
-/* eslint-disable-next-line */
-export interface NavigationbarProps {}
+export interface NavigationbarProps {
+    timerDuration: number;
+    showTimer: boolean;
+    onTimerExpire: () => void;
+}
 
 export const Navigationbar = (props: NavigationbarProps) => {
-    console.log('Hello World');
-
     return (
         <>
             <Navbar bg="dark" variant="dark">
@@ -22,9 +22,10 @@ export const Navigationbar = (props: NavigationbarProps) => {
                 <Nav className="me-auto">
                     <Navbar.Text>
                         <Timer
-                            isTimer={true}
-                            timerDuration={60}
+                            isTimer={props.showTimer}
+                            timerDuration={props.timerDuration * 60}
                             currentTime={new Date().valueOf()}
+                            onTimerExpire={props.onTimerExpire}
                         />
                     </Navbar.Text>
                 </Nav>

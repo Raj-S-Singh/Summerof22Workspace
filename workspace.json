@@ -1,10 +1,10 @@
 {
-  "version": 2,
-  "projects": {
-    "configuration-box": "libs/configuration-box",
-    "mock-test-platform": "apps/mock-test-platform",
-    "mock-test-platform-e2e": "apps/mock-test-platform-e2e",
-    "navigationbar": "libs/navigationbar",
-    "test-application": "libs/test-application"
-  }
+    "version": 2,
+    "projects": {
+        "configuration-box": "libs/configuration-box",
+        "mock-test-platform": "apps/mock-test-platform",
+        "mock-test-platform-e2e": "apps/mock-test-platform-e2e",
+        "navigationbar": "libs/navigationbar",
+        "test-application": "libs/test-application"
+    }
 }
