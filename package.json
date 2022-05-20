@@ -2,16 +2,12 @@
     "name": "final-summer-workspace",
     "version": "0.0.0",
     "license": "MIT",
-    "homepage": "https://github.com/Raj-S-Singh/Summerof22Workspace",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/Raj-S-Singh/Summerof22Workspace.git"
-    },
+    "homepage": "https:///raj-s-singh.github.io/Summerof22Workspace",
     "scripts": {
         "start": "nx serve",
         "build": "nx build",
         "test": "nx test",
-        "predeploy": "npm run build -- --prod --baseHref=/mock-test-platform/",
+        "predeploy": "npm run build -- --prod --baseHref=/Summerof22Workspace/",
         "deploy": "gh-pages -d dist/apps/mock-test-platform"
     },
     "private": true,
