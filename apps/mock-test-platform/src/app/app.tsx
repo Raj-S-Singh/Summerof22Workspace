@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ConfigurationBox } from '@final-summer-workspace/configuration-box';
 import { Navigationbar } from '@final-summer-workspace/navigationbar';
 import { TestApplication } from '@final-summer-workspace/test-application';
@@ -15,6 +15,15 @@ export function App() {
     const [showTimer, setShowTimer] = useState(false);
 
     const [showResults, setShowResults] = useState(false);
+
+    useEffect(() => {
+        document.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+        });
+        return document.removeEventListener('contextmenu', (e) => {
+            e.preventDefault();
+        });
+    }, []);
 
     return (
         <>
